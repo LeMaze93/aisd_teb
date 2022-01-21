@@ -15,8 +15,11 @@ public class Task2 {
     static Car car8 = new Car(true, 2019, 3, 7, 90000);
     static Car car9 = new Car(false, 2007, 1, 8, 38000);
     static Car car10 = new Car(true, 2019, 2, 9, 110000);
+    static Car car11 = new Car(false, 2015, 2, 10, 61000);
+    static Car car12 = new Car(true, 2021, 3, 11, 119000);
+    static Car car13 = new Car(false, 2006, 1, 12, 25000);
 
-    private static List<Car> carList = new LinkedList<>(Arrays.asList(car1, car2, car3, car4, car5, car6, car7, car8, car9, car10)); //todo ma być posortowana po roczniku, auta nowesze jako pierwsze a starsze później, i stale utzymywać porządek
+    private static List<Car> carList = new LinkedList<>(Arrays.asList(car1, car2, car3, car4, car5, car6, car7, car8, car9, car10, car11, car12, car13)); //todo ma być posortowana po roczniku, auta nowesze jako pierwsze a starsze później, i stale utzymywać porządek
 
     public static List<Car> getCarList(){ //TIP singleton
         //zwraca aktualny stan listy aut
@@ -58,16 +61,29 @@ public class Task2 {
 
     public static void addCarsToList() {
         //todo
+
+        carList.add(car11);
+        carList.add(car12);
+        carList.add(car13);
     }
 
     public static void removeCarFromList() {
         //todo
+
+        carList.remove(car5);
+        carList.remove(car7);
     }
 
     public static void printCarListAfterSomeModification(){
         //dodaj 2-3 nowe auta do listy
         //usuń z listy 1-2 auta
         // wyświetl listę
+
+        addCarsToList();
+        removeCarFromList();
+        for (Car modifiedCars : carList) {
+            System.out.println(modifiedCars);
+        }
     }
 
 }
