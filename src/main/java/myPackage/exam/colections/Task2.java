@@ -1,6 +1,7 @@
 package myPackage.exam.colections;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -33,6 +34,11 @@ public class Task2 {
         //- auta najnowsze, o najwyższym roku produkcji, mają być wyświetlane przed autami starszymi
         //- auta o wyższym poziomie wyposażenia mają być przed autami o niższym poziomie wyposażenia
         //- auta droższe mają być wyświetlane przed tańszymi
+
+        Collections.sort(carList);
+        for(Car cars : carList) {
+            System.out.println(cars);
+        }
     }
 
     public static void printCarsToValueAndLevelOfEquipment(double maxValue, int levelOfEquipment){
