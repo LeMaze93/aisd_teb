@@ -1,10 +1,24 @@
 package myPackage.exam.colections;
 
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Task2 {
     //przynajmniej 10 elementów, pokrywająca większość przypadków i umożliwiająca po wyświetlonych danych ocenić działanie programu
-    private static List<Car> carList; //todo ma być posortowana po roczniku, auta nowesze jako pierwsze a starsze później, i stale utzymywać porządek
+
+    static Car car1 = new Car(true, 2019, 3, 0, 95000);
+    static Car car2 = new Car(false, 2008, 1, 1, 40000);
+    static Car car3 = new Car(false, 2002, 1, 2, 27000);
+    static Car car4 = new Car(true, 2021, 3, 3, 150000);
+    static Car car5 = new Car(false, 2010, 2, 4, 55000);
+    static Car car6 = new Car(true, 2021, 3, 5, 125000);
+    static Car car7 = new Car(true, 2019, 2, 6, 70000);
+    static Car car8 = new Car(true, 2019, 3, 7, 90000);
+    static Car car9 = new Car(false, 2007, 1, 8, 38000);
+    static Car car10 = new Car(true, 2019, 2, 9, 110000);
+
+    private static List<Car> carList = new LinkedList<>(Arrays.asList(car1, car2, car3, car4, car5, car6, car7, car8, car9, car10)); //todo ma być posortowana po roczniku, auta nowesze jako pierwsze a starsze później, i stale utzymywać porządek
 
     public static List<Car> getCarList(){ //TIP singleton
         //zwraca aktualny stan listy aut
