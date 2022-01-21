@@ -1,9 +1,6 @@
 package myPackage.exam.colections;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Task2 {
     //przynajmniej 10 elementów, pokrywająca większość przypadków i umożliwiająca po wyświetlonych danych ocenić działanie programu
@@ -46,6 +43,17 @@ public class Task2 {
         // oraz mające konkretny poziom wyposażenia np: poziom 2 = auto ma klimatyzację, a poziom 1 auto klimatyzacji nie ma itp
         //ZADANIE: wyfiltruj a następnie wypisz auta od najtańszego do najdroższego z listy aut
         //todo tutaj wykonaj zadanie
+
+        List<Car> filterCars = new LinkedList<>();
+        for (Car car : carList) {
+            if(car.getValue() <= maxValue && Objects.equals(car.getLevelOfEquipment(), levelOfEquipment)) {
+                filterCars.add(car);
+            }
+        }
+        Collections.sort(filterCars);
+        for (Car cars : filterCars) {
+            System.out.println(cars);
+        }
     }
 
     public static void addCarsToList() {

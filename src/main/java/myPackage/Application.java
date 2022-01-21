@@ -4,7 +4,7 @@ import myPackage.exam.colections.Task2;
 
 public class Application {
     public static void main(String[] args) {
-        Task2.printSortedCars();
+        Task2.printCarsToValueAndLevelOfEquipment(100000, 3);
 
     }//koniec metody głównej "main", to co poza nią nie zostanie wykonane chyba, że zostanie wywołane z wnętrza metody "main"
 
